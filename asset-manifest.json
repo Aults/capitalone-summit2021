@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/capitalone-summit2021/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/capitalone-summit2021/static/js/main.e2fa96bb.chunk.js",
+    "main.js.map": "/capitalone-summit2021/static/js/main.e2fa96bb.chunk.js.map",
+    "runtime-main.js": "/capitalone-summit2021/static/js/runtime-main.32fb15b6.js",
+    "runtime-main.js.map": "/capitalone-summit2021/static/js/runtime-main.32fb15b6.js.map",
+    "static/js/2.547c7a06.chunk.js": "/capitalone-summit2021/static/js/2.547c7a06.chunk.js",
+    "static/js/2.547c7a06.chunk.js.map": "/capitalone-summit2021/static/js/2.547c7a06.chunk.js.map",
+    "index.html": "/capitalone-summit2021/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/capitalone-summit2021/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.547c7a06.chunk.js.LICENSE.txt": "/capitalone-summit2021/static/js/2.547c7a06.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32fb15b6.js",
+    "static/js/2.547c7a06.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.e2fa96bb.chunk.js"
+  ]
+}
