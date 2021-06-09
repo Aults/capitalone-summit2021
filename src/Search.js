@@ -98,7 +98,6 @@ const Search = () => {
     if(pagesSeen[newPage + ""] !== true) {
       axios.get(`https://www.omdbapi.com/?s=${searchQuery}&page=${newPage + 1}&type=movie&apikey=${apikey}`)
       .then(res => {
-        console.log(res)
         if(res != null && res.data.Response === 'False') return;
         pagesSeen[newPage + ""] = true;
         var tempRows = [];
@@ -116,7 +115,6 @@ const Search = () => {
         }
       });
     } else {
-      console.log("here")
       setPage(newPage);
     }
   };
@@ -136,7 +134,6 @@ const Search = () => {
   const handleRowClick = (event, row) => {
     axios.get(`https://www.omdbapi.com/?i=${row.imdb}&apikey=${apikey}`)
     .then(res => {
-      console.log(res.data)
       setCurrentRow(res.data);
       setShowList(false);
     });
