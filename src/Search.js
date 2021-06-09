@@ -96,7 +96,7 @@ const Search = () => {
 
   const handleChangePage = (event, newPage) => {
     if(pagesSeen[newPage + ""] !== true) {
-      axios.get(`http://www.omdbapi.com/?s=${searchQuery}&page=${newPage + 1}&type=movie&apikey=${apikey}`)
+      axios.get(`https://www.omdbapi.com/?s=${searchQuery}&page=${newPage + 1}&type=movie&apikey=${apikey}`)
       .then(res => {
         console.log(res)
         if(res != null && res.data.Response === 'False') return;
@@ -134,7 +134,7 @@ const Search = () => {
   };
 
   const handleRowClick = (event, row) => {
-    axios.get(`http://www.omdbapi.com/?i=${row.imdb}&apikey=${apikey}`)
+    axios.get(`https://www.omdbapi.com/?i=${row.imdb}&apikey=${apikey}`)
     .then(res => {
       console.log(res.data)
       setCurrentRow(res.data);
@@ -142,7 +142,7 @@ const Search = () => {
     });
   };
   const handleSearch = (value, num) => {
-    axios.get(`http://www.omdbapi.com/?s=${searchQuery}&type=movie&page=${num}&apikey=${apikey}`)
+    axios.get(`https://www.omdbapi.com/?s=${searchQuery}&type=movie&page=${num}&apikey=${apikey}`)
     .then(res => {
       setPagesSeen({})
       setPage(0)
