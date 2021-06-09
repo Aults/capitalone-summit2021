@@ -99,10 +99,10 @@ const Search = () => {
       axios.get(`http://www.omdbapi.com/?s=${searchQuery}&page=${newPage + 1}&type=movie&apikey=${apikey}`)
       .then(res => {
         console.log(res)
-        if(res !== null && res.data.Response === 'False') return;
+        if(res != null && res.data.Response === 'False') return;
         pagesSeen[newPage + ""] = true;
         var tempRows = [];
-        if(res !== null && res.data !== null && res.data.Search !== null) {
+        if(res != null && res.data != null && res.data.Search != null) {
           for(var i = 0; i < res.data.Search.length; i++) {
             if(overlapMap[res.data.Search[i].imdbID] !== true) {
               tempRows.push(createData(res.data.Search[i].Title, res.data.Search[i].Year, res.data.Search[i].Poster, res.data.Search[i].imdbID, 3 * i + newPage))
@@ -111,7 +111,7 @@ const Search = () => {
           }
         }
         setRows(rows.concat(tempRows));
-        if(res !== null && res.data !== null && res.data.Search !== null) {
+        if(res != null && res.data != null && res.data.Search != null) {
           setPage(newPage);
         }
       });
@@ -148,7 +148,7 @@ const Search = () => {
       setPage(0)
       setOverlapMap({})
       var tempRows = [];
-      if(res !== null && res.data !== null && res.data.Search !== null) {
+      if(res != null && res.data != null && res.data.Search != null) {
         for(var i = 0; i < res.data.Search.length; i++) {
           if(overlapMap[res.data.Search[i].imdbID] !== true) {
             tempRows.push(createData(res.data.Search[i].Title, res.data.Search[i].Year, res.data.Search[i].Poster, res.data.Search[i].imdbID, i + 10000 + page))
